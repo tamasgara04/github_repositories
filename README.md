@@ -26,9 +26,22 @@ This project implements a backend application for discovering popular repositori
 - `language` (optional): Filter repositories by programming language.
 - `limit` (optional): Limit the number of repositories to return.
 
+### Examples
+
+To fetch popular repositories created after January 1, 2024, written in Python, and limited to 10 results:
+    ```
+    GET /repositories/popular?date=2024-01-01&language=python&limit=10
+    ```
+
+To fetch popular repositories without any filters:
+    ```
+    GET /repositories/popular
+    ```
+
 ## Testing
 
 To run tests, execute the following command:
     ```
     pytest
     ```
+Make sure that the `PYTHONPATH` environment variable is set to the root project folder.

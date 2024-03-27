@@ -1,11 +1,9 @@
 import requests
 from datetime import datetime
-from app.utils.cache import cache
 
 GITHUB_API_URL = "https://api.github.com/search/repositories"
 
 class GitHubService:
-    @cache.memoize(timeout=300)  # Cache for 5 minutes
     def get_popular_repositories(self, date=None, language=None, limit=None):
         query_params = {
             'q': 'stars:>0',  # Retrieve repositories with at least 1 star

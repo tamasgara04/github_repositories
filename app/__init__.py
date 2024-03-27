@@ -1,5 +1,6 @@
 from flask import Flask
+from app.routes.repositories import repositories_blueprint
 
 app = Flask(__name__)
 
-from app.routes import repositories
+app.register_blueprint(repositories_blueprint)
