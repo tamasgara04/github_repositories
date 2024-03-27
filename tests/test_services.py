@@ -1,4 +1,4 @@
-from app.services.github_service import GitHubService
+from ..app.services.github_service import GitHubService
 
 def test_get_popular_repositories():
     github_service = GitHubService()
